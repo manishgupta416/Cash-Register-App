@@ -16,14 +16,14 @@ hide[2].style.display = "none"
 
 console.log(billAmount)
 nxtBtn.addEventListener('click' , function goNext () {
-    if((billAmount.value != "") && (billAmount.value) != isNaN() ){
+    if((billAmount.value != "") && (billAmount.value) == isNaN()  && (billAmount.value) >=0 ){
         nxtBtn.style.display = "none"
     hide[0].style.display = "block"
     hide[1].style.display = "block"
     hide[2].style.display = "block"
     showMessage("")
      } else{
-        showMessage("Invalid Bill Amount")
+        showMessage("Please input bill amount and amount must be greater than 0")
      }
 }
 )
@@ -37,7 +37,7 @@ checkBtn.addEventListener('click' , validateBillAndCashAmount)
 function validateBillAndCashAmount () {
     hidemessage() 
     
-    if(billAmount.value > 0){
+    if(billAmount.value > 0 && cashGiven.value != "" && cashGiven.value>0 ){
         if(cashGiven.value >= billAmount.value) {
             console.log(cashGiven)
             const amountToBeReturned = cashGiven.value - billAmount.value
@@ -51,7 +51,7 @@ function validateBillAndCashAmount () {
 
     } else{
       
-        showMessage("Invalid Bill Amount")
+        showMessage("Invalid input value and (value must be greater than 0)")
     }
 }
 
