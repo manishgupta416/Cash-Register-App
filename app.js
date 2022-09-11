@@ -16,7 +16,7 @@ hide[2].style.display = "none"
 
 console.log(billAmount)
 nxtBtn.addEventListener('click' , function goNext () {
-    if((billAmount.value != "") && (billAmount.value) == isNaN()  && (billAmount.value) >=0 ){
+    if((billAmount.value != "") &&  (billAmount.value) >=0 ){
         nxtBtn.style.display = "none"
     hide[0].style.display = "block"
     hide[1].style.display = "block"
